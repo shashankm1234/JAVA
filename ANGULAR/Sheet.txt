@@ -1,0 +1,22 @@
+Task	                                        HOURS
+What is Angular	 	                          1
+Creating New App	                          4
+Creating Components	 	                  5
+String Interpolation	 	                  3
+Data Binding	 	                          8
+Event Binding	 	                          4
+Bindable Properties and Events	 	          8
+Implementing Two way binding	 	          8
+Understanding Directives	 	          4
+ngIf Else	 	                          4
+ngFor Of	 	                          4
+Services / Data Service	 	                  8
+Routing	                                          8
+Error Handling	 	                          3
+Error Interceptor	 	                  4
+Auth Guard	 	                          4
+
+Making HTTP Request and 
+Handling Response	 	                 16
+
+Dependency Injection	 	                  8
