@@ -1,0 +1,22 @@
+   Topics	                                                               Hours                    	 
+1. Javascript Basics(Variables,Functions,List, Loops,IfElse)	                16                      	 
+2. Installation	                                                                 8               		 
+3. JSX	                                                                         8              		 
+4. State and Lifecycle	                                                         8              		 
+5. Components and Props	                                                         8                		 
+6. Handling Events	                                                         8                		 
+7. Conditional Rendering	                                                16               		 
+8. Handling Input(text,radio,checkbox,dropdown)	                                16                		 
+9. Lists and Keys	                                                         8                	 
+10. hooks	                                                                24		 
+11. Promises	                                                                16		 
+12. Forms			                                                16
+13. Navigating Between Screens - Routing	                                 8
+14. API Call(fetch,apics)	                                                16	 
+15. React Context	                                                        12	 
+16. Redux                                                                       16	 
+Total	                                                                       204
+	 
+Ref: https://reactjs.org/docs/getting-started.html	 	 	 	 
+ 	 	 	 	 
+
