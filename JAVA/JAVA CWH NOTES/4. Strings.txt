@@ -1,0 +1,76 @@
+-> STRING is a sequence of characters.
+In java, String is a class but can also be used as a data type.
+String name = new String("Harry");       // since String is a class, making object of it
+sout(name);      // Harry
+OR
+String name = "Harry";
+
+Strings are IMMUTABLE(cant b changed).
+
+-> PRINTING IN JAVA
+(i) System.out.println();   // new line at the end
+(ii) System.out.print();    // no new line at end
+(iii) System.out.printf();   
+int a = 12;
+float b = 32.45f;
+System.out.printf("The value of a is %d and value of b is %f.",a,b);
+// The value of a is 12 and value of b is 32.45.
+%d for int , %f for float , %c for char , %s for string 
+
+(iv)System.out.format()  // same as System.out.printf()
+
+-> STRING METHODS
+Methods to operate on Strings.Doesn't change existing string, returns a new string
+String name = "Harry";
+(1) name.length()   -> gives length of string(5)
+(2) name.toLowerCase() -> returns new string to lower case (harry)
+(3) name.toUpperCase() -> returns new string to lower case (HARRY)
+(4) name.trim() -> returns new string after removing all leading & trailing spaces from original string
+String name = "      Harry     ";
+name.trim();      // "Harry"
+(5) name.substring(start) -> returns substring from start(3) to end of string (ry)
+(6) name.substring(start,end) -> returns substring from start index to end index and end index won't be included
+name.substring(2,4);  // rr
+(7) name.replace(char,char) -> returns new string replacing both
+name.replace('r','p');       // Happy
+(8) name.startsWith("Ha")  -> returns true if name starts with "Ha" , else false
+(8) name.endsWith("ry")  -> returns true if name end with "ry" , else false
+(9) name.charAt(2) -> r
+(10) name.indexOf(string) -> returns index of given string , returns first occurence
+(11) name.indexOf(string,3)  -> returns index of string from 3rd index
+(12) name.lastIndexOf(string) -> returns last index of given string
+(13) name.lastIndexOf(string,2) -> returns last index of string before index 2
+(14) name.equals("Harry") -> true if string is equal else false
+(15) name.equalsIgnoreCase("harry") -> returns true if both strings are equal ignoring the cases(lower or upper)
+
+-> ESCAPE SEQUENCE CHARACTERS
+\' -> for '
+\" -> for "
+\n -> for new line
+\t -> for tab space
+\\ -> for backslash \
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

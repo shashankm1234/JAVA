@@ -1,0 +1,188 @@
+-> CONSTRUCTORS in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created.
+It can be used to set initial values for object attributes.
+Constructor is called when the object is created.
+It calls a default constructor if there is no constructor available in the class.
+
+// Create a Main class
+public class Main {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+
+Note: The constructor name must match the class name, and it cannot have a return type (like void).
+
+-> THIS & SUPER
+this is a way for us to reference an object of class which is being created/referenced.
+If variable name are same in methods, use this to remove compiler's confusion.
+this.a = a;     // reference to current object i.e. in this.a , the a is of class and a after = is of the object called
+CODE:
+class Myclass{
+    int a;
+    public int getA(){
+        return a;
+    }
+    // this is a reference
+    Myclass(int a){
+        this.a = a;      //a becomes 5
+    }
+    // this will give error as compiler gets confused between both a
+    // Myclass(int a){
+        // a = a;
+    // }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Myclass m = new Myclass(5);
+		System.out.println(m.getA());
+	}
+}
+
+
+* super is a reference variable used to refer immediate parent class object 
+* super can be used to invoke parent class methods
+* super can be used to invoke parent class constructors
+CODE:
+class Myclass{
+    int a;
+    public int getA(){
+        return a;
+    }
+    // this is a reference
+    Myclass(int a){
+        this.a = a;      //a becomes 5
+    }
+    // this will give error as compiler gets confused between both a
+    // Myclass(int a){
+        // a = a;
+    // }
+    
+    public int returnone(){
+        return 1;
+    }
+}
+class SecondClass extends Myclass{
+    SecondClass(int c){
+        super(c);
+        System.out.println("Constructor of SecondClass");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Myclass m = new Myclass(5);
+		SecondClass sc = new SecondClass(32);
+	}
+}
+
+-> Constructor Types
+(i) Default Constructor: A constructor is called "Default Constructor" when it doesn't have any parameter.
+(ii) Parameterized Constructor: A constructor which has a specific number of parameters is called a parameterized constructor.
+
+Constructor Overloading: Constructor overloading in Java is a technique of having more than one constructor with different parameter lists. They are arranged in a 
+way that each constructor performs a different task.They are differentiated by the compiler by the number of parameters in the list and their types.
+
+-> Use of this () in constructor overloading
+this is a reference variable that refers to the current object.
+See this, here parameters (formal arguments) and instance variables are same. So, we are using this keyword to distinguish local variable and instance variable.
+class Student{  
+int rollno;  
+String name;  
+float fee;  
+Student(int rollno,String name,float fee){  
+rollno=rollno;  
+name=name;  
+fee=fee;  
+}  
+void display(){
+System.out.println(rollno+" "+name+" "+fee);}  
+}  
+class TestThis1{  
+public static void main(String args[]){  
+Student s1=new Student(111,"ankit",5000f);  
+Student s2=new Student(112,"sumit",6000f);  
+s1.display();  
+s2.display();  
+}} 
+
+After using this():
+class Student{  
+int rollno;  
+String name;  
+float fee;  
+Student(int rollno,String name,float fee){  
+this.rollno=rollno;  
+this.name=name;  
+this.fee=fee;  
+}  
+void display(){System.out.println(rollno+" "+name+" "+fee);}  
+}  
+class TestThis2{  
+public static void main(String args[]){  
+Student s1=new Student(111,"ankit",5000f);  
+Student s2=new Student(112,"sumit",6000f);  
+s1.display();  
+s2.display();  
+}} 
+
+-> CONSTRUCTOR OVERLOADING
+class Employee{
+       int id;
+       String name;
+    public Employee(){
+          id=45;
+          name="Shashank";
+}
+    public Employee(String n,int i){
+    name = n;
+    id = i;
+}
+public static void main(String[]args){
+    Employee obj = new Employee();          // id=45 name="Shashank"
+    Employee obj2 = new Employee("Harry",54);       // id=54, name="Harry"
+}
+// There can be more than 2 overloaded constructors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

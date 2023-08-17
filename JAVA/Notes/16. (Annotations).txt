@@ -1,0 +1,50 @@
+-> ANNOTATIONS provide some extra info about a program. It provides metadate to class/methods.
+
+@Override -> used to mark overriden elements in child classes
+Code:
+class Hey{
+    public void voice(){
+        System.out.println("MALE VOICE");
+}}
+class Hello extends Hey{
+    public void voice(){
+        System.out.println("FEMALE VOICE");
+}}
+public class Main
+{    public static void main(String[] args) {
+		Hey h = new Hey();
+		h.voice();               // MALE VOICE
+		Hello he = new Hello();
+		he.voice();              // FEMALE VOICE
+}}
+
+Here suppose while overriding the method voice() in class Hello, by mistake we did a spelling error and named it voide() instead of voice(), the error won't be shown
+and will not run code. Hence if we use @Override it'll show us exact where the error is and will tell us to change voide() to voice().
+
+Using @Override annotation means its compulsory for us to override.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

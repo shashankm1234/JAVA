@@ -1,0 +1,100 @@
+-> DATA TYPES
+(i) Primitive Data Type: such as boolean, char, int, short, byte, long, float, and double
+(ii) Non-Primitive Data Type or Object Data type: such as String, Array and Classes 
+
+(i) Primitive Data Types
+int myNum = 5;               // Integer (whole number)
+float myFloatNum = 5.99f;    // Floating point number
+char myLetter = 'D';         // Character
+boolean myBool = true;       // Boolean
+String myText = "Hello";     // String
+
+Numbers
+Primitive number types are divided into two groups:
+1. Integer types stores whole numbers, positive or negative (such as 123 or -456), without decimals. Valid types are byte, short, int and long. 
+2. Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: float and double.
+
+INTEGER TYPES:
+1) Byte
+The byte data type can store whole numbers from -128 to 127. 
+This can be used instead of int or other integer types to save memory when you are certain that the value will be within -128 and 127:
+byte myNum = 100;
+
+2) Short
+The short data type can store whole numbers from -32768 to 32767:
+short myNum = 5000;
+short yourNum = 32767;
+
+3) Int
+The int data type can store whole numbers from -2147483648 to 2147483647.
+In general, and in our tutorial, the int data type is the preferred data type when we create variables with a numeric value.
+int myNum = 100000;
+
+4) Long
+Long
+The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807. 
+This is used when int is not large enough to store the value. Note that you should end the value with an "L":
+long myNum = 15000000000L;
+// NOTE: Long values should end with L
+
+FLOAT TYPES:
+1) Float
+You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.
+The float and double data types can store fractional numbers. Note that you should end the value with an "f" for floats and "d" for doubles:
+float myNum = 5.75f;
+
+2) Double
+double myNum = 19.99d;
+
+Q. Which to use: float or double?
+Ans. The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits. 
+Therefore it is safer to use double for most calculations.
+
+A floating point number can also be a SCIENTIFIC number with an "e" to indicate the power of 10:
+float f1 = 35e3f;
+double d1 = 12E4d;
+
+BOOLEAN TYPES:
+true or false
+Boolean values are mostly used for conditional testing.
+
+CHARACTER TYPE:
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':
+char myGrade = 'B';
+
+Alternatively, if you are familiar with ASCII values, you can use those to display certain characters:
+char myVar1 = 65, myVar2 = 66, myVar3 = 67;            // A B C
+
+Note: Ascii of A=65 and Z=90 , a=97 and z=122
+
+STRING TYPE:
+An array of characters works same as Java string.
+The String data type is used to store a sequence of characters (text). String values must be surrounded by double quotes:
+String greeting = "Hello World";
+
+char[] ch={'j','a','v','a','t','p','o','i','n','t'};  
+String s=new String(ch);  
+// is same as
+String s="javatpoint";  
+
+Java String class provides a lot of methods to perform operations on strings such as compare(),
+concat(), equals(), split(), length(), replace(), compareTo(), intern(), substring() etc.
+
+String s=new String("Welcome");  //creates two objects and one reference variable
+
+NOTE: A String in Java is actually a non-primitive data type, because it refers to an object. The String object has methods that are used 
+to perform certain operations on strings.
+
+(ii) Non-Primitive Data Types
+These are user-defined data types created by programmers. These data types are used to store multiple values.
+Non-primitive types are created by the programmer and is not defined by Java (except for String).
+
+There are five types of non-primitive data types in Java. They are as follows:
+1.Class   2.Object    3.String    4.Array     5.Interface
+
+
+
+
+
+
+

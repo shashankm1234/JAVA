@@ -1,0 +1,204 @@
+NOTE: Loops can execute a block of code as long as a specified condition is reached.
+Loops are handy because they save time, reduce errors, and they make code more readable.
+
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+
+(1) IF: if (condition) {
+  // block of code to be executed if the condition is true
+}
+Eg. if (20 > 18) {
+  System.out.println("20 is greater than 18");
+}
+
+IF-ELSE: if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}
+Eg. int time = 20;
+if (time < 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+
+ELSE-IF:if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+Eg. int time = 22;
+if (time < 10) {
+  System.out.println("Good morning.");
+} else if (time < 18) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."
+
+TERNARY OPERATOR(?:)
+variable = (condition) ? expressionTrue :  expressionFalse;
+Eg. int time = 20;
+String result = (time < 18) ? "Good day." : "Good evening.";
+System.out.println(result);        // "Good evening."
+
+(2) SWITCH CASE STATEMENTS:
+The switch statement selects one of many code blocks to be executed:
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+NOTE: When switch gets a case true/matched, it executes it and all cases below it. So we use break so that it executes that case and come of switch loop.
+If any case not gets matched, it executes the default case.
+int day = 4;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  case 4:
+    System.out.println("Thursday");
+    break;
+  case 5:
+    System.out.println("Friday");
+    break;
+  case 6:
+    System.out.println("Saturday");
+    break;
+  case 7:
+    System.out.println("Sunday");
+    break;
+}
+// Outputs "Thursday"
+
+BREAK Keyword:
+When Java reaches a break keyword, it breaks out of the switch block.
+This will stop the execution of more code and case testing inside the block.
+When a match is found, and the job is done, it's time for a break. There is no need for more testing.
+A break can save a lot of execution time because it "ignores" the execution of all the rest of the code in the switch block.
+
+DEFAULT Keyword
+The default keyword specifies some code to run if there is no case match:
+
+(3) WHILE LOOPS
+The while loop loops through a block of code as long as a specified condition is true:
+while (condition) {
+  // code block to be executed
+}
+Eg. int i = 1;
+while (i <= 5) {
+  System.out.print(i + " ");
+  i++;
+}               // 1 2 3 4 5
+
+(4) DO WHILE LOOPS
+ This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+do {
+  // code block to be executed
+}
+while (condition);
+Eg.     int i = 1;
+    do {
+      System.out.print(i + " ");
+      i++;
+    }
+    while (i <= 5);  
+
+(5) FOR LOOPS
+When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+Statement 2 defines the condition for executing the code block.
+Statement 3 is executed (every time) after the code block has been executed.
+
+for (int i = 1; i <= 5; i++) {
+    System.out.print(i + " ");
+}  
+// 1 2 3 4 5
+
+for (int i = 1; i <= 10; i = i + 2) {
+    System.out.println(i);
+}
+// 1 3 5 7 9
+
+NESTED LOOPS
+It is also possible to place a loop inside another loop. This is called a nested loop.
+The "inner loop" will be executed one time for each iteration of the "outer loop":
+// Outer loop
+for (int i = 1; i <= 2; i++) {
+  System.out.print("Outer: " + i); // Executes 2 times
+  
+  // Inner loop
+  for (int j = 1; j <= 3; j++) {
+    System.out.print(" Inner: " + j); // Executes 6 times (2 * 3)
+  }
+} 
+ 
+// Outer: 1 Inner: 1 Inner: 2 Inner: 3Outer: 2 Inner: 1 Inner: 2 Inner: 3
+
+(6) FOR-EACH LOOPS
+Used exclusively to loop through elements in an array:
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+Eg. String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+    for (String i : cars) {
+      System.out.print(i + " ");
+    }   
+// Volvo BMW Ford Mazda 
+
+-> Java BREAK and CONTINUE
+Break:
+It was used to "jump out" of a switch statement. The break statement can also be used to jump out of a loop.
+Eg.  for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+        break;
+      }
+      System.out.print(i);
+    }  
+// 0 1 2 3
+
+Continue:
+    for (int i = 0; i < 10; i++) {
+      if (i == 4) {
+        continue;
+      }
+      System.out.println(i);
+    }  
+// 0 1 2 3 5 6 7 8 9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

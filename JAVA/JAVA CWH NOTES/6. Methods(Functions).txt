@@ -1,0 +1,72 @@
+-> METHODS is functions written inside a class.
+int sum(int a,int b){
+   return a+b;         // returns integer
+}
+sum(2,3);      // calling method
+
+void print(){
+    sout("Hey");        // doesn't return anything
+}
+
+-> Calling method
+Main obj = new Main();
+obj.sum(3,2);
+
+-> STATIC Keyword
+Used to associate a method of given class with class rather than object
+static method is a class shared by all objects.
+
+-> VarArgs (Variable Arguments)
+A function can have more than 1 arguments.
+Eg. static int sum(int a,int b){
+      return a+b;
+}
+public static void main(String[] args){
+    sout("Sum of 4 and 5 is " + sum(4,5));     // 9
+    sout("Sum of 4,10 and 5 is " + sum(4,5,10));     // gives error as sum() takes only 2 params
+
+SOLUTION: Varargs
+// this says all the arguments getting to sum() will come inside an array packed , available as an integer array
+static int sum(int ...arr){
+        int result = 0;
+        for(int a:arr){
+            result+=a;
+        }
+        return result;
+ }
+	public static void main(String[] args) {
+		System.out.println("SUM OF 4,5 IS " + sum(4,5));
+		System.out.println("SUM OF 4,5,10 IS " + sum(4,5,10));
+		System.out.println("SUM OF 4,5,10,98 IS " + sum(4,5,10,98));
+}
+// The method works in many ways, no boundation.
+// To give atleast one argument, give x as a compulsory parameter, at least one arg has to b given
+static int sum(int x,int ...arr){
+        int result = 0;
+        for(int a:arr){
+            result+=a;
+        }
+        return result;
+    }
+	public static void main(String[] args) {
+		System.out.println("SUM OF 4,5 IS " + sum(4,5));
+		System.out.println("SUM OF 4,5,10 IS " + sum(4,5,10));
+		System.out.println("SUM OF 4,5,10,98 IS " + sum(4,5,10,98));
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

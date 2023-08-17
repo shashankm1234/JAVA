@@ -1,0 +1,267 @@
+-> OOPS (Object Oriented Programming)
+DRY(Don't Repeat Yourself)
+// Solving a problem by creating objects is Object Oriented Programming(mainly to solve real-world problems).
+Object-oriented programming has several advantages over procedural programming:
+(i) OOP is faster and easier to execute
+(ii) OOP provides a clear structure for the programs
+(iii) OOP helps to keep the Java code DRY "Don't Repeat Yourself", and makes the code easier to maintain, modify and debug
+(iv) OOP makes it possible to create full reusable applications with less code and shorter development time
+
+Class-> Employee
+Attributes(data members) -> name,age,salary
+Methods(member functions) -> getSalary(),increment()
+
+-> CUSTOM CLASS (NOTE: In a Java file, there can be only 1 public class.)
+class Employee{
+     int id=12;
+     String name="Harry";
+     // method of class
+     public void printDetails(){ 
+         System.put.print("My name is " + name + " and my id is " + id);
+}
+}
+public static void main(String[]args){
+     Employee harry = new Employee();       // created an object named harry of class Employee
+     // harry.id = 12;
+     // harry.name = "Harry";
+     sout(harry.id);       //12
+     sout(harry.name);     //Harry
+}
+
+
+Classes and objects are the two main aspects of object-oriented programming.
+Eg. class(Fruit) , objects(Apple,Banana,Mango)
+class(Car) , objects(Volvo,Audi,Toyota)
+
+To create a class, use the keyword class:
+Create a class named "Main" ,file name is Main.java.
+public class Main {
+  int x = 5;
+}
+
+Creating an Object:
+public class Classes {
+    // class must be named on file name
+    // here x variable is inside class Classes, in main() object myObj is made
+    // then using dot(.) , obj accesses x
+    int x = 5;
+  public static void main(String[] args) {
+    Classes myObj = new Classes();
+    System.out.println(myObj.x);
+  }
+}
+
+MULTIPLE OBJECTS
+public class Classes {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Classes myObj1 = new Classes();  // Object 1
+    Classes myObj2 = new Classes();  // Object 2
+    System.out.println(myObj1.x);
+    System.out.println(myObj2.x);
+  }
+}
+
+-> Using MULTIPLE CLASSES
+You can also create an object of a class and access it in another class. This is often used for better organization of classes (one class has all the attributes 
+and methods, while the other class holds the main() method (code to be executed)).
+Remember that the name of the java file should match the class name. In this example, we have created two files in the same directory/folder:
+Main.java
+Second.java
+
+In Main.java:
+public class Main {
+  int x = 5;
+}
+
+In Second.java:
+class Second {
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+
+Now when both files have been compiled, run Second.java file
+O.P. 5
+
+-> Class ATTRIBUTES(also called FIELDS)
+public class Main {
+  int x = 5;
+  int y = 3;
+}
+Here x,y are attributes of class Main.
+
+Accessing Attributes
+You can access attributes by creating an object of the class, and by using the dot syntax (.)
+public class Main {
+  int x = 5;
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    System.out.println(myObj.x);
+  }
+}
+
+Modifying attributes:
+myObj.x = 40;
+System.out.println(myObj.x);         // 40
+
+If you don't want the ability to override existing values, declare the attribute as final:
+public class Main {
+  final int x = 10;
+
+  public static void main(String[] args) {
+    Main myObj = new Main();
+    myObj.x = 25; // will generate an error: cannot assign a value to a final variable
+    System.out.println(myObj.x);
+  }
+}
+
+-> STATIC vs. PUBLIC
+You will often see Java programs that have either static or public attributes and methods.
+In the example above, we created a static method, which means that it can be accessed 
+without creating an object of the class, unlike public, which can only be accessed by objects.
+
+-> Access Methods With an Object
+Create a Car object named myCar. Call the fullThrottle() and speed() methods on the myCar object, and run the program:
+
+// Create a Main class
+public class Main {
+  // Create a fullThrottle() method
+  public void fullThrottle() {
+    System.out.println("The car is going as fast as it can!");
+  }
+  // Create a speed() method and add a parameter
+  public void speed(int maxSpeed) {
+    System.out.println("Max speed is: " + maxSpeed);
+  }
+  // Inside main, call the methods on the myCar object
+  public static void main(String[] args) {
+    Main myCar = new Main();   // Create a myCar object
+    myCar.fullThrottle();      // Call the fullThrottle() method
+    myCar.speed(200);          // Call the speed() method
+  }
+}
+
+-> Java Modifiers
+The public keyword is an access modifier, meaning that it is used to set the access level for classes, attributes, methods and constructors.
+(1) Access Modifiers - controls the access level
+
+For CLASSES
+(i) public : The class is accessible by any other class
+(ii) default : The class is only accessible by classes in the same package. This is used when you don't specify a modifier. 
+
+For ATTRIBUTES,METHODS and CONSTRUCTORS
+(i) public : The code is accessible for all classes
+(ii) private : The code is only accessible within the declared class
+(iii) default : The class is only accessible by classes in the same package. This is used when you don't specify a modifier. 
+(iv) protected : The code is accessible in the same package and subclasses. 
+
+(2) Non-Access Modifiers - do not control access level, but provides other functionality
+
+For CLASSES
+(i) final : class cannot be inherited by other classes 
+(ii) abstract : The class cannot be used to create objects,to access an abstract class, it must be inherited from another class.
+
+For ATTRIBUTES and METHODS
+final,static,absract
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

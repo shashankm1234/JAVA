@@ -1,0 +1,46 @@
+-> POLYMORPHISM
+* Means Many forms. Polymorphism in Java is a concept by which we can perform a single action in different ways.
+* Same object having different behaviour. Eg. Person is also a teacher,customer,father,husband etc...
+* There are two types of polymorphism in Java: compile-time polymorphism and runtime polymorphism. 
+* We can perform polymorphism in java by method overloading and method overriding.
+
+Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. 
+This allows us to perform a single action in different ways.
+
+-> Two types of achieving Polymorphism:
+(i) Compile Time Polymorphism: Polymorphism existing at the time of compilation is Compile Time Polymorphism, also called Early binding or Static Polymorphism.
+Achieved using METHOD OVERLOADING. It means a class having more than 1 method with same name but different parameters.
+NOTE: Java doesn't support OPERATOR OVERLOADING.
+Eg. void foo();
+    void foo(int a);
+    void foo(int a,int b);
+    void foo(double a,double b);
+
+(ii) Run-time polymorphism: also called dynamic method dispatch involves overriding a method at run-time instead of compile-time.
+Achieved using METHOD OVERRIDING(if child class implements the same method present in parent class again,its method overriding).
+NOTE: Always use @Override annotation while overriding,its not necessary but recommended.
+
+class A{
+    public int harry(){
+        return 4;
+    }
+    public void method2(){
+        System.out.println("I am method2 of class A");
+    }
+}
+class B extends A{
+    // B is overriding method2() of class A
+    // writing @Override is a good practice as if any error comes while overriding this annotation will inform us
+    @Override 
+    public void method2(){
+        System.out.println("I am method2 of class B");
+    }
+
+Here if method2() of A is made like:
+public void method2(int a){
+        System.out.println("I am method2 of class A");
+    }
+And method2() of B remains same, error won't specify where the problem is, but if we use @Override annotation it'll tell us the error.So use @Override
+
+
+

@@ -1,0 +1,45 @@
+-> Access Modifiers in Java (PRIVATE,PUBLIC,PROTECTED)
+Specifier where a property/method is accessible.
+
+(i)Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class. We use getters,setters for it.
+Used for data hiding.
+private String name;
+print int age;
+
+(ii)Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package 
+and outside the package.
+
+(iii)Protected: The protected access modifier is accessible within package and outside the package but through inheritance only.
+The protected access modifier can be applied on the data member, method and constructor. It can't be applied on the class.
+It provides more accessibility than the default modifer.
+
+(iv) Default:
+Dont have to write anything.
+If you don't use any modifier, it is treated as default by default. The default modifier is accessible only within package. It cannot be accessed from outside the package.
+ It provides more accessibility than private. But, it is more restrictive than protected, and public.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,147 @@
+FUNCTIONS
+Functions in Java are blocks of code that perform a specific task, and they are used to organize code and make it more modular and reusable.
+To define a function in Java, you use the keyword "public" (or "private" or "protected") followed by the return type of the function, then the name of the function, 
+and finally a set of parentheses containing any parameters the function may take. 
+Eg. public void sayHello() {  
+  System.out.println("Hello, world!");  
+}  
+// void means function returns nothing
+
+sayHello();    // calling function
+
+To define a function that takes one or more parameters, you simply list them inside the parentheses when you define the function.
+public int add(int a, int b) {  
+  return a + b;  
+}  
+int result = add(21,32);    // 53
+
+public int doubleValue(int a) {  
+  return a * 2;  
+}  
+int result = doubleValue(5);    // 10
+
+-> Diff btw Functions & Methods in Java
+Function refers to a block of reusable code that performs a specific task. Functions are commonly used in procedural programming paradigms. 
+However, in Java specifically, the term "function" is not commonly used, and it's more appropriate to refer to these reusable code blocks as "methods."
+In Java, a method is a collection of statements that are grouped together to perform a specific action. Methods are associated with objects or classes,
+as Java follows the object-oriented programming (OOP) paradigm. Methods define the behavior of an object or the functionality of a class.
+Some differences are:
+(i) Invocation: Functions are typically invoked by passing arguments, while methods are invoked on an object or class using the dot notation.
+(ii) Object/Class Association: Functions are not bound to any specific object or class, whereas methods are associated with objects or classes.
+Methods can access the state (data) and behavior (methods) of the object they are invoked on.
+(iii) Overriding: Methods can be overridden in subclasses to provide a different implementation, allowing for polymorphic behavior. Functions do not have the concept 
+of overriding. Although in c++ functions can be over-rided.
+
+
+
+METHODS(same as functions)
+Eg. public class Main {
+  static void myMethod() {
+    System.out.println("I just got executed!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+// Outputs "I just got executed!"
+
+Eg. public class Main {
+  static void myMethod() {
+    System.out.println("I just got executed!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+    myMethod();
+    myMethod();
+  }
+}
+// I just got executed!
+// I just got executed!
+// I just got executed!
+
+Eg. public class Main {
+  static void myMethod(String fname) {
+    System.out.println(fname + " Refsnes");
+  }
+
+  public static void main(String[] args) {
+    myMethod("Liam");
+    myMethod("Jenny");
+    myMethod("Anja");
+  }
+}
+// Liam Refsnes
+// Jenny Refsnes
+// Anja Refsnes
+
+NOTE: STATIC Keyword can be:
+(i) Variable (also known as a class variable)
+The static variable can be used to refer to the common property of all objects (which is not unique for each object), for example, the company name of employees, 
+college name of students, etc. The static variable gets memory only once in the class area at the time of class loading.
+Saves memory & makes program more efficient.
+(ii) Method (also known as a class method)
+
+(iii) Block
+
+(iv) Nested class
+
+NOTE: void keyword, used in the examples above, indicates that the method should not return a value. If you want the method to return a 
+value, you can use a primitive data type (such as int, char, etc.) instead of void, and use the return keyword inside the method:
+
+METHOD OVERLOADING
+With method overloading, multiple methods can have the same name with different parameters:
+Eg. static int plusMethodInt(int x, int y) {
+  return x + y;
+}
+static double plusMethodDouble(double x, double y) {
+  return x + y;
+}
+public static void main(String[] args) {
+  int myNum1 = plusMethodInt(8, 5);
+  double myNum2 = plusMethodDouble(4.3, 6.26);
+  System.out.println("int: " + myNum1);
+  System.out.println("double: " + myNum2);
+}
+
+Eg. static int plusMethod(int x, int y) {
+  return x + y;
+}
+static double plusMethod(double x, double y) {
+  return x + y;
+}
+public static void main(String[] args) {
+  int myNum1 = plusMethod(8, 5);
+  double myNum2 = plusMethod(4.3, 6.26);
+  System.out.println("int: " + myNum1);
+  System.out.println("double: " + myNum2);
+}
+
+-> JAVA SCOPE
+In Java, variables are only accessible inside the region they are created. This is called scope.
+(1) METHOD SCOPE
+Variables declared directly inside a method are available anywhere in the method following the line of code in which they were declared:
+public class Main {
+  public static void main(String[] args) {
+    // Code here CANNOT use x
+    int x = 100;
+    // Code here can use x
+    System.out.println(x);
+  }
+} 
+
+(2) BLOCK SCOPE
+A block of code refers to all of the code between curly braces {}.
+Variables declared inside blocks of code are only accessible by the code between the curly braces, which follows the line in which the variable was declared.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,86 @@
+->Variables are containers holding some value.Java is statically types language i.e. variables must be declared before use.
+int number = 90;  char ch = 'S';
+Variables in java are case-sensitive i.e. harry and Harry are different.
+Variable name can have _,$, and digits.
+
+->KEYWORDS: Reserved words used by java compiler.They cant b used as an identifier.
+
+-> DATA TYPES
+(1) Primitive: Java has 8 primitive data types.
+int,byte,float,char,bool,long,double,short
+(i) byte: Stores integer , takes 1 byte(8bits) , stores value from -128 to 127 , default value is 0
+(ii) short: Stores integer , takes 2 bytes(16bits) , stores value from -32768 to 32767, default value is 0 [-(2power16)/2 to (2power16)/2 -1]
+(iii) int: Stores integer, takes 4bytes(32bits) , stores value from [-(2power32)/2 to (2power32)/2 -1] , default value is 0
+(iv) float: takes 4 bytes(32bits), default value 0.0f
+(v) long: value ranges from [-(2power64)/2 to (2power64)/2 -1] , takes 8 bytes(64bits), default value is 0
+(vi) double: takes 8bytes(64 bits) , default value is 0.0d
+(vii) char: value range 0 to (2power16 -1) i.e. 65535 , takes 2 bytes(16bits)
+(viii) boolean: value can be true/false , default value is false
+
+(2) Non primitive:Derived from primitive data types.
+
+-> LITERALS IN JAVA
+Integral: int,byte,short,long  Floats:float,double   Char:''    Boolean:true,false
+A constact value which can be assigned to the variable is called literal.
+char ch = 'A';   float a = 1.5f;  (f tells its a floating point literal) , double d = 4.122d;  String s = "Shashank";
+long l = 122233334l;
+
+-> Resulting Data type after Arithmetic operations
+int a = 10+20;         // a is integer only
+(i) byte + short = int
+(ii) short + int = int
+(iii) long + float = float   
+(iv) int + float = float
+(v) byte + float = float
+(vi) char + int = int
+(vii) char + String = int
+(viii) long + double = double
+(ix) float + double = double
+
+-> INCREMENT(++) DECREMENT(--)
+(i) Post Increment
+int i = 10;
+int b = i++;    // first i gets used and then i gets incremented
+// now b is 10 and a is 11
+
+(ii) Pre Increment
+int i = 10;
+int b = ++i;           // first i gets incremented and then gets used (i is now 11 and b is also 11)
+
+(iii) Post Decrement
+int i = 10;
+int b = i--;       // b is 10 and i is 9
+
+(iv) Pre Decrement
+int i = 10;
+int b = --i;      // i is 9 and b is also 9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

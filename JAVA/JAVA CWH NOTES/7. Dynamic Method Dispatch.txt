@@ -1,0 +1,31 @@
+class Phone{
+    public void greet(){
+        System.out.println("Good Morning!");
+    }
+    public void name(){
+        System.out.println("My name is JAVA in class Phone.");
+    }
+}
+class SmartPhone extends Phone{
+    public void swagat(){
+        System.out.println("SWAGAT H AAPKA");
+    }
+    public void name(){
+        System.out.println("My name is JAVA in class SmartPhone.");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    // NOTE: OBJECTS ARE MADE AT RUN-TIME NOT COMPILE-TIME.
+		// Phone obj = new Phone();                // allowed
+		// SmartPhone smobj = new SmartPhone();    // allowed
+		
+		Phone obj = new SmartPhone();    // here reference is of super-class and object is of sub-class , so its allowed
+		// parent class can have reference to object of child class , but child class can't have reference to object of parent class
+		// SmartPhone obj2 = new Phone();       // error (all SmartPhones are Phone but not all Phones are SmartPhones)
+		
+		obj.name();           // My name is JAVA in class SmartPhone
+		// name() of SmartPhone gets called i.e. method of object(SmartPhone) gets run
+	}
+}

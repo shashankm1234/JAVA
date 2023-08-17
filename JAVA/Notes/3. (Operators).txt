@@ -1,0 +1,100 @@
+-> Java Type Casting
+1) Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+Widening casting is done automatically when passing a smaller size type to a larger size type.
+
+int myInt = 9;
+double myDouble = myInt; // Automatic casting: int to double
+
+2) Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+Narrowing casting must be done manually by placing the type in parentheses in front of the value.
+
+double myDouble = 9.78d;
+int myInt = (int) myDouble; // Manual casting: double to int
+
+-> OPERATORS
+Java divides the operators into the following groups:
+1) Arithmetic operators (+,-,*,/,%,++,--)
+2) Assignment operators (=,+=,-=,*=,/=,%=,&=,|=,^= i.e. xor, >>= i.e. right shift, <<= i.e. left shift)
+3) Comparison operators (==,!=,>,<,>=,<=)
+4) Logical operators (&&,||,!)
+5) Bitwise operators (&,|,^,<<,>>)
+
+-> Precedence & Associativity
+(+,-) has less precedence compared to (*,/)
+
+Associativity: 
+* / -> LEFT TO RIGHT
++ - -> LEFT TO RIGHT
+++ = -> RIGHT TO LEFT
+
+
+-> More on Strings
+String txt = "Shashank";
+txt.length();         // 8
+
+String txt = "Hello World";
+System.out.println(txt.toUpperCase());   // Outputs "HELLO WORLD"
+System.out.println(txt.toLowerCase());   // Outputs "hello world"
+
+String txt = "Please locate where 'locate' occurs!";
+txt.indexOf("locate");  // Outputs 7
+
+To concatenate:
+String firstName = "John ";
+String lastName = "Doe";
+System.out.println(firstName.concat(lastName)); 
+OR
+String firstName = "John";
+String lastName = "Doe";
+System.out.println(firstName + " " + lastName);
+
+String x = "10";
+String y = "20";
+String z = x + y;  // z will be 1020 (a String)
+
+String x = "10";
+int y = 20;
+String z = x + y;  // z will be 1020 (a String)
+
+Special Characters in Strings
+(i) \' Single quote         String txt = "It\'s alright.";    // It's alright.
+(ii) \" Double quote        String txt = "We are the so-called \"Vikings\" from the north.";   // We are the so-called "Vikings" from the north.
+(iii) \\ Backslash          String txt = "The character \\ is called backslash.";          // The character \ is called backslash.
+More:  \n(newline), \t(tab), \r(carriage return), \b(backspace)
+
+-> MATH In Java
+Math.max(x,y) method can be used to find the highest value of x and y:
+Math.max(5, 10);               // 10
+
+Math.min(x,y) method can be used to find the lowest value of x and y:
+Math.min(5, 10);             // 5
+
+Math.sqrt(x) method returns the square root of x:
+Math.sqrt(64);              // 8
+
+Math.abs(x) method returns the absolute (positive) value of x:
+Math.abs(-4.7);                // 4.7
+
+Math.random() returns a random number between 0.0 (inclusive), and 1.0 (exclusive):
+Math.random();                   // 0.75543221
+
+To get random nos. btw 0 and 100
+int randomNum = (int)(Math.random() * 101);  // 0 to 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

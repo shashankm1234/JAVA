@@ -1,0 +1,113 @@
+->Java was developed in 1991(James Goslin). JAVA is completely object-oriented.
+
+Q.How Java works?
+Ans.Java source code gets compiled in byte code of java, then gets interpreted in machine code.
+Java is compiled & interpreted language.
+
+-> JDK(Java Development Kit) is a collection of tools used for developing & running java programs.
+-> JRE(Java Runtime Environment) helps in executing programs developed in Java.
+
+-> Basic structure of Java program
+pachage com.company;       // groups classes & functions
+public class Main{
+   public static void main(String[] args){
+       System.out.println("Hello world");          // Prints Hello world (sout for shortcut)
+}}
+// File name saved as should be same as class name i.e. Main.java
+// main() is auto function in java , each thing inside it gets executed , program starts from main() function, compulsory for java program
+// static makes it possible for us to run function of class without making its object.
+
+-> Naming Concentions
+For classes: PascalCase i.e. MainClass
+For functions: camelCase i.e. myFunction
+
+-> package com.company is a parent package used in java to group classes,usually for companies.
+
+-> import used to use classes of different files in our file code.
+
+-> USER INPUT: Scanner
+Java has a Scanner class.Scanner class has a lot of methods to read data from keyboard.
+Importing it: import java.util.Scanner;   (now in our code we can use Scanner class)
+Scanner sc = new Scanner;
+Code: import java.util.Scanner;
+      Scanner sc = new Scanner(System.in);     // System.in means we want to read from keyboard 
+      System.out.print("Enter number: ");
+      int a = sc.nextInt();
+      System.out.println("Number is : " + a);
+      float b = sc.nextFloat();
+
+-> hasNextInt()  checks for type of input entered correct or not 
+boolean b = sc.hasNextInt();
+sout(b);          // if user enters integer when b has true but if user enters float or any other type, b has false
+// user for checking validation of user input
+// hasNextFloat()
+// For string
+String str = sc.next();
+sout(str);     // reads word and stops reading after a space
+Eg. harry is a good boy
+O.P. harry
+
+-> sc.nextLine() To read full line 
+String str = sc.nextLine();
+sout(str);  
+Eg. harry is a good boy
+O.P. harry is a good boy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

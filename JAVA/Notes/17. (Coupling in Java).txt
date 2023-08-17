@@ -1,0 +1,74 @@
+-> COUPLING
+Two types of coupling:
+(1) Tight coupling : In general, Tight coupling means the two classes often change together. 
+If A knows more than it should about the way in which B was implemented, then A and B are tightly coupled.
+Eg. If you want to change the skin, you would also have to change the design of your body as well because the two are joined together,they are tightly coupled.
+Code:
+class Subject {
+    Topic t = new Topic();
+    public void startReading()
+    {
+        t.understand();
+    }
+}
+class Topic {
+    public void understand()
+    {
+        System.out.println("Tight coupling concept");
+    }
+}
+Explanation: In the above program the Subject class is dependents on Topic class.Subject class is tightly coupled with Topic class 
+it means if any change in the Topic class requires Subject class to change. For example, if Topic class understand() 
+method change to gotit() method then you have to change the startReading() method will call gotit() method instead of calling understand() method.
+
+(2) Loose coupling : In simple words, loose coupling means they are mostly independent. If the only knowledge that class A has about class B, 
+is what class B has exposed through its interface, then class A and class B are said to be loosely coupled. 
+Eg. If you change your shirt, then you are not forced to change your body – when you can do that, then you have loose coupling. 
+// Java program to illustrate 
+// loose coupling concept
+public interface Topic
+{
+    void understand();
+}
+class Topic1 implements Topic {
+public void understand()
+    {
+        System.out.println("Got it");
+    }
+} class Topic2 implements Topic {
+public void understand()
+    {
+        System.out.println("understand");
+    }
+} public class Subject {
+public static void main(String[] args)
+    {
+        Topic t = new Topic1();
+        t.understand();
+    }
+}
+Explanation : In the above example, Topic1 and Topic2 objects are loosely coupled. 
+It means Topic is an interface and we can inject any of the implemented classes at run time and we can provide service to the end user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

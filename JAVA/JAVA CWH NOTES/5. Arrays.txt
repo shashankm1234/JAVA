@@ -1,0 +1,66 @@
+-> ARRAYS is collection of similar types of data. Array is an object in Java.
+int[] marks = new int[5];        // declaring and memory allocating
+marks[0]=70; marks[1]=80; marks[2]=75; marks[3]=32; marks[4]=54;
+// memort = 5*4bytes = 20bytes
+
+More ways:
+int [] marks = {100,200,300,400,500};
+
+-> Array Length
+marks.length;   // 5
+
+-> Display array
+for(int i=0;i<marks.length;i++){
+    sout(i + " ");
+}
+
+-> FOR-EACH LOOP (directly gives element,no index)
+for(int element:marks){
+    sout(element);
+}
+
+-> MULTI-DIMENSIONAL(2D) ARRAYS
+Array of arrays
+int [][] flats = new int[2][3];       // rows 2, columns 3
+flats[0][0] = 12;
+flats[0][1] = 23;
+flats[1][0] = 34;
+flats[1][1] = 54;
+flats[2][0] = 98;
+flats[2][1] = 67;
+ 
+Displaying 2d array:
+for(int i=0;i<flats.length;i++){
+   for(int j=0;j<flats[i].length;j++){
+          sout(flats[i][j] + " ");
+}}
+// 12 23 34 54 98 67
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

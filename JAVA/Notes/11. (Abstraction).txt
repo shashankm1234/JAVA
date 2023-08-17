@@ -1,0 +1,118 @@
+-> ABSTRACTION
+*Abstract in English means existing in through or as an idea without physical/concrete existence.
+* Eg. Thought is ABSTRACT , work done is CONCRETE
+*Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+*Example, sending SMS where you type the text and send the message. You don't know the internal processing about the message delivery.
+*Abstraction lets you focus on what the object does instead of how it does it.
+*A class which is declared with the abstract keyword is known as an abstract class in Java. It can have abstract and non-abstract methods (method with the body).
+
+Ways to achieve Abstraction:
+There are two ways to achieve abstraction in java
+(i)Abstract class (0 to 100%)
+(ii)Interface (100%)
+
+The abstract keyword is a non-access modifier, used for classes and methods:
+(1) ABSTRACT CLASS: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+*A class which is declared as abstract is known as an abstract class. It can have abstract and non-abstract methods.
+*It needs to be extended and its method implemented. It cannot be instantiated.
+*An abstract class must be declared with an abstract keyword.
+*It can have abstract and non-abstract methods.
+*It cannot be instantiated.
+*It can have constructors and static methods also.
+*It can have final methods which will force the subclass not to change the body of the method.
+Syntax: abstract class A{}  
+
+(2) ABSTRACT METHOD: If a class contains abstract methods, it must be declared as an abstract class.
+A method which is declared as abstract and does not have implementation is known as an abstract method.
+Syntax: abstract void printStatus();   //no method body and abstract  
+public abstract  class Phone{
+       abstract void switchOff();
+       // more code
+}
+
+-> Understanding the real scenario of Abstract class
+Abstract class is a class which helps to make other classes.
+An abstract class can't make its object. Diff btw normal class and an abstract class is a normal class can make their objects but an abstract class cant make their object.
+This is because abstract class is not actually a class, its a standard for making other classes.
+
+-> So from an abstract class, we can either make a concrete class by overriding all methods of abstract class in child class OR we can make an abstract class from
+other abstract class. To make an object we need a concrete class inheriting from an abstract class as an abstract class itself cant make an object.
+
+-> When an abstract class is sub-classes,the sub-class usually provides implementations for all the methods in parent class.If it doesnt provide, it must be declared
+abstract.
+
+-> INTERFACES
+Interface means point where 2 systems meet & interact. In Java , Interface is a group of related methods with empty bodies.
+Eg. A phone is a camera,a microphone,a speaker,a web browser etc. so a phone is an INTERFACE. All methods in an interface.
+In an Interface, each method is ABSTRACT. 
+
+*Diff btw ABSTRACT CLASS & INTERFACE: 
+(i) We cant make a new class using multiple abstract classes BUT we can make a new class using multiple interfaces.
+(ii) Abstract class can have both abstract methods and normal methods, Interface can only have Abstract methods.
+NOTE: We cant make objects of Interface too.
+NOTE: When we inherit we use EXTENDS, but when we use interface we use IMPLEMENTS.
+Example:
+interface Bicycle{
+     void applyBrakes(int decrement);
+     void speedUp(int increment);
+}
+// the class which implements the interface class Bicycle, its compulsory for us to write the body of all functions in that class
+class AvonCycle implements Bicycle{
+     int speed=7;
+     public void applyBrakes(int decrement){
+     speed -= decrement;
+     }
+     public void speedUp(int increment){
+     speed += increment;
+     }
+}
+When we implement methods of interface in our class, those should be made as public.
+
+-> Abstract classes VS Interfaces
+(i) Many interfaces can be used to make one class. A class can inherit a normal class as well as implement an interface class.
+(ii) You cannot modify properties of Interfaces as they are FINAL but you can use properties of Interfaces.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

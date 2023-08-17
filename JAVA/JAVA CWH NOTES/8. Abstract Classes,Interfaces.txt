@@ -1,0 +1,77 @@
+-> ABSTRACT means existing in thought or as an idea but not having a physical/concrete existence.
+
+-> ABSTRACT METHOD is a method without an implementation.
+   abstract void fun(int x,int y);
+
+-> ABSTRACT CLASS 
+If a class contains an abstract method, its an Abstract class and it must be declared an abstract class.
+public abstract class PhoneModel{
+     abstract void switchOff();
+}
+
+ABSTRACT CLASSES is used to make more different classes.
+
+-> Objects of abstract classes can't be made as abstract classes aren't actual classes, they're just a standard for other classes to make a concrete class.
+
+-> VERY IMPORTANT
+If there's an abstract class Parent, a child class Child inheriting Parent class, then either the Child class must be declared OR the Child class must override
+all the abstract methods of class Parent.
+So the class Parent is ABSTRACT CLASS & class Child is CONCRETE CLASS.
+
+-> If we don't override all abstract methods of Parent class, Child class won't become Concrete class and till it doesn't become concrete class
+we can't make an Object in main() since making objects of abstract classes isn't possible.
+
+NOTE: In abstract classes, some methods were abstract methods and there were also some methods that weren't abstract i.e. concrete methods. 
+      But in Interfaces, all methods must be abstract only.
+
+-> INTERFACES
+In Interface, all methods are ABSTRACT i.e. just declared, not defined.
+In Java, Interface is a group of related methods(phone is a camera,microphone,web browser all are interface) with empty bodies.
+
+NOTE: During inheritance we use extends keyword, but interfaces use implements keyword.
+NOTE: We can't use multiple abstract classes to form a new class but we can use multiple interfaces to form a new class.
+
+-> Here are some key points and use cases for interfaces in Java:
+(i) Abstraction and Encapsulation: Interfaces allow you to define a blueprint for behaviour without revealing the internal implementation details. 
+This helps to achieve abstraction, as clients of the interface only need to know what methods are available and how to use them,
+without worrying about the underlying logic.
+
+(ii) Multiple Inheritance: Java does not support multiple inheritance for classes (a class can only extend one superclass). 
+However, a class can implement multiple interfaces. This allows a class to inherit behavior from multiple sources, making it flexible and reusable.
+
+(iii) Polymorphism: Interfaces enable polymorphism, where different classes can implement the same interface, allowing them to be used 
+interchangeably through the interface type. This promotes code flexibility and modularity.
+
+(iv) Design by Contract: Interfaces define a contract that implementing classes must adhere to. 
+When a class implements an interface, it commits to providing implementations for all the methods declared in that interface.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

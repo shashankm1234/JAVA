@@ -1,0 +1,158 @@
+-> SYNTAX
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+Every line of code that runs in Java must be inside a class. In our example, we named the class Main. 
+A class should always start with an uppercase first letter.
+Note: Java is case-sensitive: "MyClass" and "myclass" has different meaning.
+
+The name of the java file must match the class name. When saving the file, save it using the class name and add ".java" to the end of the filename.
+So here file will be saved as Main.java since the name of class is Main.
+
+The main Method is Required and you will see it in every Java program:
+public static void main(String[] args){}     // Any code inside the main() method will be executed.
+
+System.out.println()
+Inside the main() method, we can use the println() method to print a line of text to the screen:
+public static void main(String[] args) {
+  System.out.println("Hello World");
+}
+O.P. Hello World
+
+System is a built-in Java class that contains useful members, such as out, which is short for "output". 
+The println() method, short for "print line", is used to print a value to the screen (or a file). Each code statement must end with a semicolon (;).
+
+You can add as many println() methods as you want. Note that it will add a new line for each method.
+System.out.println("Hello World!");
+System.out.println("I am learning Java.");
+System.out.println("It is awesome!");
+OUTPUT: Hello World!
+        I am learning Java.
+        It is awesome!
+NOTE: Difference between print() and println() is println() inserts a new line at the end of output whereas print() prints in the same line.
+
+Printing numbers:
+System.out.println(32);
+System.out.println(3 + 3);
+System.out.println(3 * 3);
+
+-> COMMENTS
+Single-line comments start with two forward slashes (//). 
+System.out.println("Hello World");  // This is a comment
+
+Multi-line comments start with /* and ends with */.
+Any text between /* and */ will be ignored by Java.
+/* The code below will print the words Hello World
+to the screen, and it is amazing */
+System.out.println("Hello World");
+
+-> VARIABLES
+String->"Hello" , Int->32,-32 , Float->19.19,-19.19 , Char->'a','B' , Boolean->true,false
+NOTE: In java, String is written in double quotes only("shashank") , not 'shashank'. Character values are surrounded by single quotes.
+
+String name = "John";   // here String is variable type, name is variable's name and = is used to assign it "John".
+int myNum = 15;         // here int is variable type, myNum is variable's name and = is used to assign it 15.
+
+You can also declare a variable without assigning the value, and assign the value later:
+int myNum;
+myNum = 15;
+
+Note that if you assign a new value to an existing variable, it will overwrite the previous value:
+int myNum = 15;
+myNum = 20;  // myNum is now 20
+
+-> FINAL Variable
+If you don't want others (or yourself) to overwrite existing values, use the final keyword (this will declare the variable as "final" or "constant", 
+which means unchangeable and read-only):
+final int myNum = 15;
+myNum = 20;  // will generate an error: cannot assign a value to a final variable (same as const in js)
+
+EXAMPLES:
+int myNum = 5;
+float myFloatNum = 5.99f;
+char myLetter = 'D';
+boolean myBool = true;
+String myText = "Hello";
+
+To combine both text and a variable, use the + character:
+String name = "John";
+System.out.println("Hello " + name);            // Hello John
+
+String firstName = "John ";
+String lastName = "Doe";
+String fullName = firstName + lastName;
+System.out.println(fullName);              // John Doe
+
+For numeric values, the + character works as a mathematical operator (notice that we use int (integer) variables here):
+int x = 5;
+int y = 6;
+System.out.println(x + y); // Print 11
+
+DECLARING MANY VARIABLES
+To declare more than one variable of the same type, you can use a comma-separated list:
+int x = 5, y = 6, z = 50;
+System.out.println(x + y + z);
+
+More on Variables:
+int a=10;  
+float f=a;  
+System.out.println(a);    // 10
+System.out.println(f);    // 10.0
+
+float f=10.5f;  
+//int a=f;//Compile time error  
+int a=(int)f;  
+System.out.println(f);     // 10.5
+System.out.println(a);     // 10
+
+float f=11.9f;  
+//int a=f;//Compile time error  
+int a=(int)f;  
+System.out.println(f);    // 11.9
+System.out.println(a);    // 11
+NOTE: When int converts float variable to integer, it simply removes the decimal, it doesn't roundoff to nearest value.
+
+-> USER INPUT IN JAVA
+The Scanner class is used to get user input, and it is found in the java.util package.
+To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation.
+import java.util.Scanner;  // Import the Scanner class
+
+Input Types
+nextBoolean()	Reads a boolean value from the user
+nextByte()	Reads a byte value from the user
+nextDouble()	Reads a double value from the user
+nextFloat()	Reads a float value from the user
+nextInt()	Reads a int value from the user
+nextLine()	Reads a String value from the user
+nextLong()	Reads a long value from the user
+nextShort()	Reads a short value from the user
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter name, age and salary:");
+    // String input
+    String name = myObj.nextLine();
+    // Numerical input
+    int age = myObj.nextInt();
+    double salary = myObj.nextDouble();
+
+    // Output input by user
+    System.out.println("Name: " + name);
+    System.out.println("Age: " + age);
+    System.out.println("Salary: " + salary);
+  }
+}
+
+
+
+
+
+
+
+
+
+

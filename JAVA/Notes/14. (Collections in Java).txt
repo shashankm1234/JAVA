@@ -1,0 +1,63 @@
+-> JAVA COLLECTIONS
+The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+(A Collection represents a single unit of objects, i.e., a group.)
+Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+
+ Java Collection framework provides many interfaces (Set, List, Queue, Deque) and 
+classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+(1) ArrayList : The ArrayList class implements the List interface.
+It uses a dynamic array to store the duplicate element of different data types. The ArrayList class maintains the insertion order and is non-synchronized. 
+The elements stored in the ArrayList class can be randomly accessed.
+
+(2) LinkedList: LinkedList implements the Collection interface.
+It uses a doubly linked list internally to store the elements. It can store the duplicate elements. It maintains the insertion order and is not synchronized. 
+In LinkedList, the manipulation is fast because no shifting is required.
+
+(3) Vector
+Vector uses a dynamic array to store the data elements. It is similar to ArrayList. 
+However, It is synchronized and contains many methods that are not the part of Collection framework.
+
+(4) Stack (LIFO)
+The stack is the subclass of Vector. It implements the last-in-first-out data structure, i.e., Stack. The stack contains all of the methods of Vector class 
+and also provides its methods like boolean push(), boolean peek(), boolean push(object o), which defines its properties.
+
+(5) QUEUE INTERFACE(FIFO)
+Queue interface maintains the first-in-first-out order. It can be defined as an ordered list that is used to hold the elements which are about to be processed. 
+There are various classes like PriorityQueue, Deque, and ArrayDeque which implements the Queue interface.
+Queue interface can be instantiated as:
+
+Queue<String> q1 = new PriorityQueue();  
+Queue<String> q2 = new ArrayDeque();  
+
+(6) PriorityQueue
+The PriorityQueue class implements the Queue interface. It holds the elements or objects which are to be processed by their priorities. 
+PriorityQueue doesn't allow null values to be stored in the queue.
+
+(7) Deque Interface (Double-ended Queue)
+Deque interface extends the Queue interface. In Deque, we can remove and add the elements from both the side. 
+Deque stands for a double-ended queue which enables us to perform the operations at both the ends.
+Deque d = new ArrayDeque();  
+
+(8) HashSet
+HashSet class implements Set Interface. It represents the collection that uses a hash table for storage. 
+Hashing is used to store the elements in the HashSet. It contains unique items.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

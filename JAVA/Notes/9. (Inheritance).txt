@@ -1,0 +1,155 @@
+-> INHERITANCE 
+ Mechanism in which one object acquires all the properties and behaviors of a parent object. 
+Inheritance represents the IS-A relationship which is also known as a parent-child relationship.
+
+(Subclass and Superclass)
+In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:
+
+(i) subclass (child class which is inheriting) - the class that inherits from another class
+(ii) superclass (parent class which is being inherited) - the class being inherited from
+To inherit from a class, use the extends keyword.
+
+Syntax:
+class Subclass-name extends Superclass-name  
+{  
+   //methods and fields  
+}  
+
+The extends keyword indicates that you are making a new class that derives from an existing class.
+
+-> Types Of Inheritance (Single,Multi-level,Hierarchical,Hybrid)
+(1) Single Inheritance : When a class inherits another class, it is known as a single inheritance, one class inheriting from another.
+(2) Multilevel Inheritance : In multi-level inheritance, a class is derived from a class which is also derived from another class.
+A class that has more than one parent class is called multi-level inheritance. 
+(3) Hierarchical Inheritance : If a number of classes are derived from a single base class, it is called hierarchical inheritance.
+(4) Hybrid Inheritance : Hybrid means consist of more than one. Hybrid inheritance is the combination of two or more types of inheritance.
+GrandFather is a super class. The Father class inherits the properties of the GrandFather class. So Father and GrandFather represents single inheritance. 
+Further, the Father class is inherited by the Son and Daughter class. Thus, the Father becomes the parent class for Son and Daughter. These classes represent 
+hierarchical inheritance. Combinedly, it denotes the hybrid inheritance.
+
+NOTE: C++ supported Multiple Inheritance, but Java doesn't support Multiple Inheritance.
+
+-> SUPER Keyword
+Super keyword in Java is a reference variable that is used to refer to parent class objects.The keyword “super” came into the picture with the concept of Inheritance.
+
+-> HAS-A Relation (Aggregation)
+If a class have an entity reference, it is known as Aggregation. Aggregation represents HAS-A relationship.
+Consider a situation, Employee object contains many informations such as id, name, emailId etc. 
+It contains one more object named address, which contains its own informations such as city, state, country, zipcode etc.
+
+class Employee{  
+int id;  
+String name;  
+Address address;//Address is a class  
+...  
+}  
+In such case, Employee has an entity reference address, so relationship is Employee HAS-A address.
+
+-> Constructors In Inheritance
+When a Derived class is extended from the Base class, when Derived class object is made then the constructor of Base class is executed first followed by constructor
+of Derived class.
+
+-> SUPER
+When there are multiple constructors in parent class,constructor without any parameter is called from child class. If we want to call parameterized constructor of
+parent class, we use super keyword.
+super(a,b);        // calls parameterized constructor of parent class that takes 2 params
+
+CODE:
+class Base{
+    int a;
+    Base(){
+        System.out.println("I am constructor of Base.");
+    }
+    // parameterized constructor of class Base
+    Base(int a){
+        System.out.println("I am overloaded constructor of Base with a as " + a);
+    }
+    
+}
+class Derived extends Base{
+    // super used to call overloaded/parameterized constructor of class Base and then this const. of Derived called
+    Derived(){
+        super(0);
+        System.out.println("I am constructor of Derived.");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Base b = new Base();
+		// Derived d = new Derived();      // if Derived class has no constructor of its own, since its inheritingfrom Base class, Derived object d will call Base class constructor
+		
+		Derived d = new Derived();
+		// now here since Derived also has its constructor, object of Derived first runs Base constructor and then Derived Constructor
+		
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
