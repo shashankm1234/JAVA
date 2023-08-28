@@ -24,3 +24,10 @@ public static void main(String args[]){
   
 }  
 } 
+
+Collection interface belongs to java.util package.
+Collection interfaces contains more interfaces:
+1) List (ArrayList , LinkedList)
+2) Queue (Dequeue)
+3) Set (Hashset , LinkedHashSet)
+4) Map
