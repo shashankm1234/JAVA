@@ -1,0 +1,26 @@
+class A{
+  public A(){
+    System.out.println("Object of A created");
+  }
+  public void show(){
+    System.out.println("Show in A");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    // A obj = new A();
+    // obj.show();
+
+    new A();        // here object is created but we dont have a variable in Stack refering to this object in Heap
+    
+  }
+}
+// BTS: In JVM, we have Stack as well as Heap memory.
+// object is created in Heap memory. obj(reference variable) is in stack memory refering to object location in Heap
+// object in Heap contains the method show()
+// NOTE: A obj = new A();   here new A() is the object creation and obj is reference variable to that object
+
+// new A()  is called ANONYMOUS OBJECT i.e. objects with no reference
+// problem with these is we can't reuse them
+// new A().show();
