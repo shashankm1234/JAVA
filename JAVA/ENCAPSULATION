@@ -1,0 +1,74 @@
+class A{
+  public A(){
+    super();
+    System.out.println("Inside A");
+  }
+  public A(int n){
+    super();
+    System.out.println("Inside A param constructor");
+  }
+}
+
+class B extends A{
+  public B(){
+    // super(4);
+    super();
+    System.out.println("Inside B");
+  }
+  public B(int n){
+    // super(n);
+    this();
+    System.out.println("Inside B param constructor");
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    // this and super
+    // B obj = new B();
+    B obj2 = new B(3);
+    
+    // OUTPUT 
+    // Inside A
+    // Inside B
+    // Inside A
+    // Inside B param constructor
+    
+    // we know whenever we create object of class, constructor first is called
+    // now it calls constructor of A, then constructor of B
+    // NOTE: When we create object of a class, it will call constructor of sub-class & super-class both (A -> superclass , B->subclass)
+  }
+}
+
+// Now we have parameterized constructor for both A and B.
+// By making objects of B, one calls default constructor and other calls parameterized constructor, they only call default constructor of A and don't call the parameterized constructor of A
+
+// Every constructor in java has a method super() BY DEFAULT.
+// Its present there even if we dont mention.
+// B obj2 = new B(3);  // when this is executed it calls param constructor of B
+// Constructor firstly sees the super().
+// super() method means call default constructor of a super-class.
+// Hence when B object is made, it goes to constructor, calls super() which executes default constructor of super-class and comes back and executes rest of the area in that constructor.
+// To call param constructor of A too :
+// public B(int n){
+//     super(n);
+//     System.out.println("Inside B param constructor");
+// }
+// by this, super calls parameterized constructor of A and not the default constructor.
+
+// Suppose using B obj = new B();  we want to print param constructor of A
+// What to do? 
+// public B(){
+//     super(4);
+//     System.out.println("Inside B");
+//   }
+
+// Now we know super() in B refers to A but what does super() in A refer to?
+// Each class in java extends the Object class.
+// Every class in Java is directly or indirectly derived from the Object class. If a class does not extend any other class then it is a direct child class of Object and if extends another class then it is indirectly derived.
+// super() in A means calling constructor of Object class.
+// Eg. class A extends Object{}
+// B extends A, A extends Object i.e. Multi-level Inheritance
+
+// Q. In B we have 2 constructors(default & parameterized), can we execute both the constructors with just 1 object?
+// Ans. this()  executes constructor of the same class.
